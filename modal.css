@@ -1,0 +1,96 @@
+.overlay {
+  border: none;
+  background: transparent;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+
+.overlay::backdrop {
+  background-color: rgba(8, 23, 30, 0.7);
+  backdrop-filter: blur(12px);
+}
+.overlay[open] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-btn {
+  font-size: 48px;
+  cursor: pointer;
+}
+.overlay-card {
+  background-color: #09212a;
+  width: 688px;
+  height: 675px;
+  border-radius: 40px;
+  padding: 0px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.overlay-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0px;
+  color: white;
+  font-family: "Figtree", sans-serif;
+  box-sizing: border-box;
+}
+
+#overlay-img {
+  width: 100%;
+  max-width: 560px;
+  height: 375px;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-footer {
+  width: 100%;
+  padding: 56px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: white;
+  font-family: "Figtree", sans-serif;
+  box-sizing: border-box;
+}
+
+.nav-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #1a262b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  color: #ff5c5c;
+  transition: all 0.2s;
+  user-select: none;
+}
+.nav-btn:focus-visible {border: 5px solid white;}
+.nav-btn:hover {
+  background-color: #2a3a41;
+  transform: scale(1.1);
+}

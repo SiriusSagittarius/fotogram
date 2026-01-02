@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  background-color: #08171e;
+  flex-direction: column;
+}
+
+header {
+  height: 81px;
+  background-color: #09212a;
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 8vw, 120px);
+}
+
+.logo img {
+  height: clamp(25px, 4vw, 40px);
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #08171e;
+  min-height: 100px;
+}
+
+h1 {
+  font-size: clamp(24px, 5vw, 56px);
+  color: white;
+  margin-bottom: 80px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+#container {
+  max-width: 1170px;
+  width: 100%;
+  min-height: 348px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#container div {
+  width: 150px;
+  height: 150px;
+  margin: 12px 8px;
+  border: 2px solid #124658;
+  border-radius: 16px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background-color: #124658; 
+
+  transition: all 0.2s ease-in-out !important;
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+#container div:hover {
+  transform: scale(1.1) !important;
+  border-color: #124658 !important;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+  z-index: 99; 
+}
+#container div:focus {
+    outline: 4px solid #ffffff; 
+    outline-offset: -4px;     
+    cursor: pointer;
+}
+footer {
+  background-image: url("img/Footer.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 128px;
+  padding: 42px 0;
+  width: 100%;
+}
+
+.logo_footer img {
+  max-width: 210px;
+  height: auto;
+}

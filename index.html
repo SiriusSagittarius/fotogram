@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <title>Document</title>
+  </head>
+  <body onload="pic()">
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="Fotogram" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Your personal photo album</h1>
+      <section id="container"></section>
+    </main>
+    <footer>
+      <div class="logo_footer">
+        <a href="index.html">
+          <img src="img/logo_footer.svg" alt="Footer_logo" />
+        </a>
+      </div>
+    </footer>
+    <dialog id="overlay" class="overlay">
+      <section class="overlay-card">
+        <header class="overlay-header">
+          <h2 id="overlay-title">Bildansicht</h2>
+          <span class="close-btn" onclick="closeOverlay()" tabindex="0">×</span>
+        </header>
+        <img id="overlay-img" src="img/pic/Alaska.jpg" alt="Selected Image" />
+        <footer class="overlay-footer">
+          <button class="nav-btn" onclick="prevImage()" tabindex="0">
+            <img src="img/pic/pfeil-links.png" alt="Zurück" />
+          </button>
+
+          <span id="image-counter">01/12</span>
+
+          <button class="nav-btn" onclick="nextImage()" tabindex="0">
+            <img src="img/pic/pfeil-rechts.png" alt="Weiter" />
+          </button>
+        </footer>
+      </section>
+    </dialog>
+  </body>
+  <script src="test.js"></script>
+</html>
